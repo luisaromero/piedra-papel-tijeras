@@ -31,3 +31,5 @@ Construir un juego funcional utilizando HTML, CSS y Javascript.
 - ¿Qué funciones existen?
 - ¿Qué reglas deben cumplirse?
 - ¿Cómo dividirían el problema?
+
+### luisa , jocelyn , seba
