@@ -30,6 +30,8 @@ function obtenerJugadaComputadora() {
 */
 function determinarGanador(jugadaJugador, jugadaComputadora) {
 
+  let resultado = ""
+
   if (jugadaJugador === jugadaComputadora) return "Empate";
 
 
@@ -42,11 +44,12 @@ function determinarGanador(jugadaJugador, jugadaComputadora) {
 
     (jugadaJugador === "tijeras" && jugadaComputadora === "papel")
 
-  ) return "Ganaste";
+  ) return resultado = "Ganaste";
 
 
-  return "Perdiste";
+  return resultado = "Perdiste";
 
+  return resultado;
 
 }
 

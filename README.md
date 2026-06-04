@@ -1,35 +1,15 @@
-# Challenge — Piedra Papel o Tijeras
+# Juego Rock Paper Scissors
 
-## Objetivo
+## Objetivo del juego
 
-Construir un juego funcional utilizando HTML, CSS y Javascript.
+Vencer a tu oponente eligiendo una de estas tres opciones :
 
-## Requisitos mínimos
+- Piedra
+- Papel o
+- Tijeras
 
-- Jugar contra computadora
-- Mostrar resultado
-- Mostrar elecciones
+## El resultado se mostrará en pantalla
 
-## Desafíos opcionales
+## Participantes
 
-- Historial de partidas
-- Contador de victorias
-- Animaciones
-- Mejoras visuales
-
-## Entrega
-
-1. Hacer fork
-2. Clonar repositorio
-3. Trabajar en equipo
-4. Actualizar README
-5. Subir cambios
-
-## Preguntas guía
-
-- ¿Qué datos necesita el sistema?
-- ¿Qué funciones existen?
-- ¿Qué reglas deben cumplirse?
-- ¿Cómo dividirían el problema?
-
-### luisa , jocelyn , seba
+_Luisa , Joselyn , Seba , Gustavo , Jennifer_
