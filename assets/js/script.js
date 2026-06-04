@@ -69,8 +69,6 @@ function actualizarPantalla(jugadaJugador, jugadaComputadora, resultado) {
   determinarGanador() y actualizarPantalla().
 */
 function jugar(jugadaJugador) {
-  console.log(jugadaJugador)
-  // obtenerJugadaComputadora()
   const jugadaComputadora = obtenerJugadaComputadora()
   const resultado = determinarGanador(jugadaJugador, jugadaComputadora)
   actualizarPantalla(jugadaJugador, jugadaComputadora, resultado)
