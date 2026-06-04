@@ -15,7 +15,7 @@ const opciones = ["piedra", "papel", "tijeras"];
   Generar una opcion aleatoria.
 */
 function obtenerJugadaComputadora() {
-
+  return opciones[Math.floor(Math.random() * opciones.length)];
 }
 
 /*
@@ -27,6 +27,24 @@ function obtenerJugadaComputadora() {
 */
 function determinarGanador(jugadaJugador, jugadaComputadora) {
 
+  if (jugadaJugador === jugadaComputadora) return "Empate";
+
+
+
+  if (
+
+    (jugadaJugador === "piedra" && jugadaComputadora === "tijeras") ||
+
+    (jugadaJugador === "papel" && jugadaComputadora === "piedra") ||
+
+    (jugadaJugador === "tijeras" && jugadaComputadora === "papel")
+
+  ) return "Ganaste";
+
+
+  return "Perdiste";
+
+
 }
 
 /*
@@ -37,7 +55,9 @@ function determinarGanador(jugadaJugador, jugadaComputadora) {
   Mostrar resultado.
 */
 function actualizarPantalla(jugadaJugador, jugadaComputadora, resultado) {
-
+  document.getElementById('jugada-jugador').textContent = jugadaJugador;
+  document.getElementById('jugada-computadora').textContent = jugadaComputadora;
+  document.getElementById('resultado').textContent = resultado;
 }
 
 /*
@@ -49,14 +69,17 @@ function actualizarPantalla(jugadaJugador, jugadaComputadora, resultado) {
   determinarGanador() y actualizarPantalla().
 */
 function jugar(jugadaJugador) {
-
+  console.log(jugadaJugador)
+  // obtenerJugadaComputadora()
+  const jugadaComputadora = obtenerJugadaComputadora()
+  const resultado = determinarGanador(jugadaJugador, jugadaComputadora)
+  actualizarPantalla(jugadaJugador, jugadaComputadora, resultado)
 }
 
 // Punto de partida: escuchar clicks en los botones del juego.
 botonesJugada.forEach((boton) => {
   boton.addEventListener("click", () => {
     const jugadaJugador = boton.dataset.jugada;
-
     jugar(jugadaJugador);
   });
 });

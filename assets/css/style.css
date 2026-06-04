@@ -118,6 +118,13 @@ h2 {
 .desafios-extra {
   min-height: 120px;
 }
+.play-again {
+  min-height: 120px;
+  margin: auto;
+  text-align: center;
+  background: #f9fbff;
+  padding: 24px;
+}
 
 /* Ajustes responsive para que las tarjetas se apilen en celulares. */
 @media (max-width: 700px) {
