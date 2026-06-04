@@ -4,6 +4,9 @@ const textoJugadaJugador = document.querySelector("#jugada-jugador");
 const textoJugadaComputadora = document.querySelector("#jugada-computadora");
 const textoResultado = document.querySelector("#resultado");
 
+let computer = 0
+let player = 0
+
 // Opciones disponibles para el juego.
 const opciones = ["piedra", "papel", "tijeras"];
 
@@ -58,6 +61,17 @@ function actualizarPantalla(jugadaJugador, jugadaComputadora, resultado) {
   document.getElementById('jugada-jugador').textContent = jugadaJugador;
   document.getElementById('jugada-computadora').textContent = jugadaComputadora;
   document.getElementById('resultado').textContent = resultado;
+  // document.getElementById('historial').textContent = resultado;
+}
+
+function sumarPunto(resultado) {
+  if (resultado === "Ganaste") {
+    player++
+    document.getElementById('puntos-jugador').textContent = player;
+  } else if (resultado === "Perdiste") {
+    computer++
+    document.getElementById('puntos-computadora').textContent = computer;
+  }
 }
 
 /*
@@ -72,6 +86,7 @@ function jugar(jugadaJugador) {
   const jugadaComputadora = obtenerJugadaComputadora()
   const resultado = determinarGanador(jugadaJugador, jugadaComputadora)
   actualizarPantalla(jugadaJugador, jugadaComputadora, resultado)
+  sumarPunto(resultado)
 }
 
 // Punto de partida: escuchar clicks en los botones del juego.
